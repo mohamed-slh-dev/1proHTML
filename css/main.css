@@ -1,0 +1,151 @@
+:root {
+  --color-theme: rgb(247, 64, 64);
+  --color-alternative: #000;
+}
+
+/* ==================================================================================== */
+/* override */
+
+.navbar {
+  padding-top: 18px;
+  padding-bottom: 18px;
+}
+
+/* ==================================================================================== */
+
+/* global */
+* {
+  font-family: 'Inter';
+}
+
+body {
+  letter-spacing: 0.4px;
+}
+
+label {
+  transition: 0.2s all ease-in-out !important;
+}
+.fs-13 {
+  font-size: 13px;
+}
+
+.fs-12 {
+  font-size: 12px;
+}
+
+.fs-11 {
+  font-size: 11px;
+}
+
+.fs-14 {
+  font-size: 14px;
+}
+
+/* images */
+.of-contain {
+  object-fit: contain;
+}
+
+/* backgrounds - text*/
+
+.text--alternative {
+  color: var(--color-alternative);
+}
+.bg--whitesmoke {
+  background-color: whitesmoke;
+}
+
+.bg--theme {
+  background-color: var(--color-theme);
+}
+
+/* ================================================================================================ */
+
+.form--input {
+  width: 90%;
+  height: 52px;
+  font-size: 14px;
+  padding: 0px 15px;
+  border-radius: 4px;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* ================================================================================================ */
+
+/* specific */
+.options--title {
+  border-bottom: 2px solid whitesmoke;
+  background-color: whitesmoke;
+}
+
+.options--subtitle {
+  border-bottom: 2px solid #efefef;
+}
+
+.options--palette {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.options--palette .options--color:first-of-type,
+.options--regular .options--radio:first-of-type {
+  border-radius: 4px 0px 0px 4px;
+}
+
+.options--palette .options--color,
+.options--regular .options--radio {
+  border-radius: 0px;
+}
+
+.options--palette .options--color:last-of-type,
+.options--regular .options--radio:last-of-type {
+  border-radius: 0px 4px 4px 0px;
+}
+
+.options--color {
+  width: 50px;
+  height: 100px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.options--color:hover,
+.options--color:focus,
+.options--color.active {
+  transform: scale(0.9);
+}
+
+.options--color span {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  text-align: center;
+  display: block;
+  height: 100%;
+  font-size: 14px;
+}
+
+.options--radio {
+  width: 100px;
+  height: 40px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #eee;
+  color: var(--color-alternative);
+  cursor: pointer;
+}
+
+.options--radio:hover,
+.options--radio:focus,
+.options--radio.active {
+  color: #fff;
+  background-color: var(--color-theme);
+}
+
+.options--radio span {
+  font-size: 14px;
+}
