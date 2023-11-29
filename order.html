@@ -1,381 +1,788 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="h-100" lang="en">
-
   <head>
-      <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-  <meta name="description" content="1Pro for printing services">
-  <link rel="apple-touch-icon" sizes="180x180" href="img/logo.webp">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/logo.webp">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/logo.webp">
-  <link rel="icon" type="image/png" sizes="96x96" href="img/logo.webp">
-  <meta name="author" content="Holger Koenemann">
-  <meta name="generator" content="Eleventy v2.0.0">
-  <meta name="HandheldFriendly" content="true">
-  <title>1Pro For Printing Services</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+    <meta name="description" content="1Pro for printing services" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/logo.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/logo.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/logo.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="img/logo.png" />
+    <meta name="author" content="Holger Koenemann" />
+    <meta name="generator" content="Eleventy v2.0.0" />
+    <meta name="HandheldFriendly" content="true" />
+    <title>1Pro For Printing Services</title>
 
-  
-  
-  <link rel="stylesheet" href="css/theme.min.css">
+    <!-- bootstrap / edited bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/theme.min.css" />
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- font -->
+    <style>
+      /* inter-300 - latin */
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: local(''), url('./fonts/inter-v12-latin-300.woff2') format('woff2'),
+          /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('./fonts/inter-v12-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      }
 
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: local(''), url('./fonts/inter-v12-latin-500.woff2') format('woff2'),
+          /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('./fonts/inter-v12-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      }
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: local(''), url('./fonts/inter-v12-latin-700.woff2') format('woff2'),
+          /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('./fonts/inter-v12-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      }
+    </style>
 
-   <style>
-
-/* inter-300 - latin */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: local(''),
-       url('./fonts/inter-v12-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('./fonts/inter-v12-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: local(''),
-       url('./fonts/inter-v12-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('./fonts/inter-v12-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: local(''),
-       url('./fonts/inter-v12-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('./fonts/inter-v12-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-</style>
-
+    <!-- main style -->
+    <link rel="stylesheet" href="css/main.css" />
   </head>
+  <!-- end header -->
+
+  <!-- ================================================= -->
 
   <body data-bs-spy="scroll" data-bs-target="#navScroll">
+    <nav
+      id="navScroll"
+      class="navbar navbar-expand-lg navbar-light fixed-top"
+      tabindex="0">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="img/logo.png"
+            style="height: 50px"
+            class="of-contain w-100" />
+        </a>
 
-    <nav id="navScroll" class="navbar navbar-expand-lg navbar-light fixed-top" tabindex="0">
-  <div class="container">
-    <a class="navbar-brand pe-4 fs-4" href="index.html">
-  <img src="img/logo.webp" width="32" height="32" alt="">
-  <span class="ms-1 fw-bolder">1Pro</span>
-</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#services"
+                aria-label="Brings you to the frontpage">
+                Services
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#aboutus"> About us </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#numbers"> Numbers </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#gallery"> Gallery </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#workwithus"> Work with us </a>
+            </li>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-      <li class="nav-item">
-    <a class="nav-link" href="index.html" aria-label="Brings you to the frontpage">
-      Home
-    </a>
-  </li>
-  
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials"> Testimonials </a>
+            </li>
 
-    </ul>
-      
+            <li class="nav-item">
+              <a
+                class="nav-link rounded-1 text-white px-3"
+                href="order.html"
+                style="background-color: rgb(230, 75, 75)">
+                Order Now!
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-    </div>
-</div>
-</nav>
-
+    <!-- ------------------------------------------------- -->
 
     <main>
-     
-        <div class="position-relative overflow-hidden w-100 bg-light mt-5" >
-            <div class="container-fluid">
+      <div
+        class="position-relative overflow-hidden w-100 bg-light"
+        style="padding-top: 60px">
+        <div class="container-fluid">
+          <div class="row p-5">
+            <!-- -------------------------------------- -->
 
+            <!-- options col -->
+            <div class="col-6 options--wrap">
+              <div class="card">
+                <!-- title -->
+                <h5 class="py-3 px-3 mb-4 options--title fw-bold rounded-top-1">
+                  Cover Options
+                </h5>
 
-                <div class="col-sm-4 mt-5">
+                <!-- card body -->
+                <div class="card-body px-3">
+                  <div class="row g-0">
+                    <!-- col -->
+                    <div class="col-6">
+                      <!-- :op title -->
+                      <h6 class="fs-13 text--alternative">Cover Type</h6>
 
-                    <div class="row p-5">
+                      <!-- :op options -->
+                      <div class="options--group d-block mb-4">
+                        <div class="options--palette">
+                          <!-- Leather -->
+                          <label
+                            for="radio--1-1"
+                            class="options--color"
+                            style="background-color: #b67a4f">
+                            <span class="text-white">Leather</span>
+                            <input
+                              id="radio--1-1"
+                              class="d-none"
+                              type="radio"
+                              name="cover_type"
+                              checked />
+                          </label>
 
-                        <div class="col-12">
-                            <h5> Cover Options</h5>
+                          <!-- Velvet -->
+                          <label
+                            for="radio--1-2"
+                            class="options--color"
+                            style="background-color: #904353">
+                            <span class="text-white">Velvet</span>
+                            <input
+                              id="radio--1-2"
+                              class="d-none"
+                              type="radio"
+                              name="cover_type" />
+                          </label>
+
+                          <!-- Black -->
+                          <label
+                            for="radio--1-3"
+                            class="options--color active"
+                            style="background-color: #111">
+                            <span class="text-white">Black</span>
+                            <input
+                              id="radio--1-3"
+                              class="d-none"
+                              type="radio"
+                              name="cover_type" />
+                          </label>
                         </div>
+                        <!-- end palette wrap -->
+                      </div>
+                      <!-- end :op group -->
+                    </div>
+                    <!-- end col -->
 
-                        <div class="col-12">
+                    <!-- ================================ -->
 
-                            <label for="">Cover type</label>
-                            <label class="radio-inline">
-                                <input type="radio" name="optradio" checked>Leather
-                              </label>
-                              <label class="radio-inline">
-                                <input type="radio" name="optradio">Velvet
-                              </label>
-        
-                              
+                    <!-- col -->
+                    <div class="col-6">
+                      <!-- :op title -->
+                      <h6 class="fs-13 text--alternative">Luxer Print Color</h6>
+
+                      <!-- :op options -->
+                      <div class="options--group d-block mb-4">
+                        <div class="options--palette">
+                          <!-- Black -->
+                          <label
+                            for="radio--2-1"
+                            class="options--color"
+                            style="background-color: #111">
+                            <span class="text-white">Black</span>
+                            <input
+                              id="radio--2-1"
+                              class="d-none"
+                              type="radio"
+                              name="cover_type" />
+                          </label>
+
+                          <!-- Green -->
+                          <label
+                            for="radio--2-2"
+                            class="options--color active"
+                            style="background-color: #006f46">
+                            <span class="text-white">Green</span>
+                            <input
+                              id="radio--2-2"
+                              class="d-none"
+                              type="radio"
+                              name="cover_type" />
+                          </label>
+
+                          <!-- red -->
+                          <label
+                            for="radio--2-3"
+                            class="options--color"
+                            style="background-color: #c8102e">
+                            <span class="text-white">Red</span>
+                            <input
+                              id="radio--2-3"
+                              class="d-none"
+                              type="radio"
+                              name="cover_type" />
+                          </label>
+
+                          <!-- blue -->
+                          <label
+                            for="radio--2-4"
+                            class="options--color"
+                            style="background-color: #005aff">
+                            <span class="text-white">Blue</span>
+                            <input
+                              id="radio--2-4"
+                              class="d-none"
+                              type="radio"
+                              name="cover_type" />
+                          </label>
                         </div>
+                        <!-- end palette wrap -->
+                      </div>
+                      <!-- end :op group -->
+                    </div>
+                    <!-- end col -->
 
-                        <div class="col-12">
+                    <!-- ================================ -->
 
-                            <label for=""> Luxer print color</label>
-                            <label class="radio-inline">
-                                <input type="radio" name="color" checked>Black
-                              </label>
-                              <label class="radio-inline">
-                                <input type="radio" name="color">Green
-                              </label>
+                    <!-- col -->
+                    <div class="col-6">
+                      <!-- :op title -->
+                      <h6 class="fs-13 text--alternative">Cover Print Color</h6>
 
-                              <label class="radio-inline">
-                                <input type="radio" name="color">Red
-                              </label>
+                      <!-- :op options -->
+                      <div class="options--group d-block mb-4">
+                        <div class="options--palette">
+                          <label
+                            for="radio--3-1"
+                            class="options--color"
+                            style="background-color: #ffbb00">
+                            <span class="text-white">Gold</span>
+                            <input
+                              id="radio--3-1"
+                              class="d-none"
+                              type="radio"
+                              name="cover_type" />
+                          </label>
 
-                              <label class="radio-inline">
-                                <input type="radio" name="color">Blue
-                              </label>
-        
-                              
+                          <label
+                            for="radio--3-2"
+                            class="options--color active"
+                            style="background-color: #b0b5b9">
+                            <span class="text-white">Silver</span>
+                            <input
+                              id="radio--3-2"
+                              class="d-none"
+                              type="radio"
+                              name="cover_type" />
+                          </label>
                         </div>
+                        <!-- end palette wrap -->
+                      </div>
+                      <!-- end :op group -->
+                    </div>
+                    <!-- end col -->
 
+                    <!-- ================================ -->
 
-                        <div class="col-12">
+                    <!-- col -->
+                    <div class="col-6">
+                      <!-- :op title -->
+                      <h6 class="fs-13 text--alternative">Sides Color</h6>
 
-                            <label for=""> Cover print color</label>
-                            <label class="radio-inline">
-                                <input type="radio" name="print_color" checked>Gold
-                              </label>
-                              <label class="radio-inline">
-                                <input type="radio" name="print_color">Silver
-                              </label>
- 
+                      <!-- :op options -->
+                      <div class="options--group d-block mb-4">
+                        <div class="options--palette">
+                          <label
+                            for="radio--5-1"
+                            class="options--color active"
+                            style="background-color: #ffbb00">
+                            <span class="text-white">Gold</span>
+                            <input
+                              id="radio--5-1"
+                              class="d-none"
+                              type="radio"
+                              name="cover_type" />
+                          </label>
+
+                          <label
+                            for="radio--5-2"
+                            class="options--color"
+                            style="background-color: #b0b5b9">
+                            <span class="text-white">Silver</span>
+                            <input
+                              id="radio--5-2"
+                              class="d-none"
+                              type="radio"
+                              name="cover_type" />
+                          </label>
                         </div>
+                        <!-- end palette wrap -->
+                      </div>
+                      <!-- end :op group -->
+                    </div>
+                    <!-- end col -->
 
-                        <div class="col-12">
+                    <!-- ================================ -->
 
-                            <label for=""> لغة المحتوى </label>
-                            <label class="radio-inline">
-                                <input type="radio" name="lang" checked>Arabic
-                              </label>
-                              <label class="radio-inline">
-                                <input type="radio" name="lang">English
-                              </label>
- 
+                    <!-- col -->
+                    <div class="col-12">
+                      <!-- :op title -->
+                      <h6 class="fs-13 text--alternative">Side Line Color</h6>
+
+                      <!-- :op options -->
+                      <div class="options--group d-block mb-4">
+                        <div class="options--palette">
+                          <label
+                            for="radio--4-3"
+                            class="options--color"
+                            style="background-color: #000">
+                            <span class="text-white">Black</span>
+                            <input
+                              id="radio--4-3"
+                              class="d-none"
+                              type="radio"
+                              name="cover_type" />
+                          </label>
+
+                          <label
+                            for="radio--4-4"
+                            class="options--color"
+                            style="background-color: #006f46">
+                            <span class="text-white">Green</span>
+                            <input
+                              id="radio--4-4"
+                              class="d-none"
+                              type="radio"
+                              name="cover_type" />
+                          </label>
+
+                          <label
+                            for="radio--4-5"
+                            class="options--color active"
+                            style="background-color: #c8102e">
+                            <span class="text-white">Red</span>
+                            <input
+                              id="radio--4-5"
+                              class="d-none"
+                              type="radio"
+                              name="cover_type" />
+                          </label>
+
+                          <label
+                            for="radio--4-6"
+                            class="options--color"
+                            style="background-color: #005aff">
+                            <span class="text-white">Blue</span>
+                            <input
+                              id="radio--4-6"
+                              class="d-none"
+                              type="radio"
+                              name="cover_type" />
+                          </label>
+
+                          <label
+                            for="radio--4-1"
+                            class="options--color"
+                            style="background-color: #ffbb00">
+                            <span class="text-white">Gold</span>
+                            <input
+                              id="radio--4-1"
+                              class="d-none"
+                              type="radio"
+                              name="cover_type" />
+                          </label>
+
+                          <label
+                            for="radio--4-2"
+                            class="options--color"
+                            style="background-color: #b0b5b9">
+                            <span class="text-white">Silver</span>
+                            <input
+                              id="radio--4-2"
+                              class="d-none"
+                              type="radio"
+                              name="cover_type" />
+                          </label>
                         </div>
+                        <!-- end palette wrap -->
+                      </div>
+                      <!-- end :op group -->
+                    </div>
+                    <!-- end col -->
 
+                    <!-- ================================ -->
 
-                        <div class="col-12">
+                    <!-- col -->
+                    <div class="col-12">
+                      <!-- :op title -->
+                      <h6 class="fs-13 text--alternative">Language</h6>
 
-                            <label for=""> Side Line Color </label>
-
-                            <label class="radio-inline">
-                                <input type="radio" name="line_color" checked>Gold
-                              </label>
-
-
-                              <label class="radio-inline">
-                                <input type="radio" name="line_color">Silver
-                              </label>
-                            <label class="radio-inline">
-                                <input type="radio" name="line_color" >Black
-                              </label>
-                              <label class="radio-inline">
-                                <input type="radio" name="line_color">Green
-                              </label>
-
-                              <label class="radio-inline">
-                                <input type="radio" name="line_color">Red
-                              </label>
-
-                              <label class="radio-inline">
-                                <input type="radio" name="line_color">Blue
-                              </label>
-        
-                              
+                      <!-- :op options -->
+                      <div class="options--group d-block mb-4">
+                        <div class="options--regular">
+                          <label for="radio--6-1" class="options--radio active">
+                            <span>Arabic</span>
+                            <input
+                              id="radio--6-1"
+                              class="d-none"
+                              type="radio"
+                              name="cover_type"
+                              checked />
+                          </label>
+                          <label for="radio--6-1" class="options--radio">
+                            <span>English</span>
+                            <input
+                              id="radio--6-1"
+                              class="d-none"
+                              type="radio"
+                              name="cover_type" />
+                          </label>
                         </div>
+                        <!-- end regular wrap -->
+                      </div>
+                      <!-- end :op group -->
+                    </div>
+                    <!-- end col -->
 
+                    <!-- ================================ -->
+                    <!-- ================================ -->
+                    <!-- ================================ -->
 
-                        <div class="col-12">
-
-                            <label for=""> Sides color</label>
-                            <label class="radio-inline">
-                                <input type="radio" name="side_colot" checked>Gold
-                              </label>
-                              <label class="radio-inline">
-                                <input type="radio" name="side_colot">Silver
-                              </label>
- 
-                        </div>
-
-
-                       
-                    <!-- end of row -->
+                    <!-- subtitle -->
+                    <div class="col-12">
+                      <h6 class="mt-4 mb-4 pb-2 options--subtitle fw-bold">
+                        Cover Options
+                      </h6>
                     </div>
 
-                    <div class="row">
+                    <!-- col -->
+                    <div class="col-6">
+                      <!-- :op title -->
+                      <h6 class="fs-13 text--alternative">Number of Pages</h6>
 
-                        <div class="col-12">
-                            <h4> Print Options</h4>
+                      <!-- :op options -->
+                      <div class="options--group d-block mb-4">
+                        <div class="options--regular">
+                          <input
+                            class="form-range"
+                            type="range"
+                            id="vol"
+                            name="vol"
+                            min="0"
+                            max="50" />
                         </div>
-
-                        <div class="col-12">
-                            <label for="vol">Number of pages</label>
-                            <input type="range" id="vol" name="vol" min="0" max="50">
-                            <input type="submit">
-
-                        </div>
-
-
-                        <div class="col-12">
-
-                            <label for="">Pages type</label>
-                            <label class="radio-inline">
-                                <input type="radio" name="pages_type" checked>Normal
-                              </label>
-                              <label class="radio-inline">
-                                <input type="radio" name="pages_type">Shiny
-                              </label>
- 
-                        </div>
-
-
-                        <div class="col-12">
-
-                            <label for="">Print sides</label>
-                            <label class="radio-inline">
-                                <input type="radio" name="print_sides" checked>One side
-                              </label>
-                              <label class="radio-inline">
-                                <input type="radio" name="print_sides">Both sides
-                              </label>
- 
-                        </div>
-
-
-
-                        <div class="col-12">
-
-                            <label for="">Document text color</label>
-                            <label class="radio-inline">
-                                <input type="radio" name="doc_color" checked>Black
-                              </label>
-                              <label class="radio-inline">
-                                <input type="radio" name="doc_color">Colorful
-                              </label>
- 
-                        </div>
-
-
-                        <div class="col-12">
-                            <label for="">Document detals</label>
-
-                            <div class="row">
-
-                                <label for="">The name of the document</label>
-                                <input type="text" style="width: 150px;" class="form-control" name="" id="">
-                                <br>
-    
-                                <label for="">Grade</label>
-    
-                                <select name="" id="" style="width: 150px;">
-                                    <option value="">Bachalore</option>
-                                    <option value="">Master</option>
-                                    <option value="">PHD</option>
-                                    <option value="">Other</option>
-    
-                                </select>
-
-                            </div>
-
-                           
-                        </div>
-
-
-                        <div class="col-12 mt-5">
-                            <button class="btn btn-success">Send</button>
-                        </div>
-
+                        <!-- end regular wrap -->
+                      </div>
+                      <!-- end :op group -->
                     </div>
-                    
+                    <!-- end col -->
+
+                    <!-- empty -->
+                    <div class="col-6"></div>
+                    <!-- ================================ -->
+
+                    <!-- col -->
+                    <div class="col-6">
+                      <!-- :op title -->
+                      <h6 class="fs-13 text--alternative">Pages Type</h6>
+
+                      <!-- :op options -->
+                      <div class="options--group d-block mb-4">
+                        <div class="options--regular">
+                          <label for="radio--7-1" class="options--radio active">
+                            <span>Normal</span>
+                            <input
+                              id="radio--7-1"
+                              class="d-none"
+                              type="radio"
+                              name="cover_type"
+                              checked />
+                          </label>
+                          <label for="radio--7-2" class="options--radio">
+                            <span>Shiny</span>
+                            <input
+                              id="radio--7-2"
+                              class="d-none"
+                              type="radio"
+                              name="cover_type" />
+                          </label>
+                        </div>
+                        <!-- end regular wrap -->
+                      </div>
+                      <!-- end :op group -->
+                    </div>
+                    <!-- end col -->
+
+                    <!-- ================================ -->
+
+                    <!-- col -->
+                    <div class="col-6">
+                      <!-- :op title -->
+                      <h6 class="fs-13 text--alternative">Print Sides</h6>
+
+                      <!-- :op options -->
+                      <div class="options--group d-block mb-4">
+                        <div class="options--regular">
+                          <label for="radio--8-1" class="options--radio active">
+                            <span>One Side</span>
+                            <input
+                              id="radio--8-1"
+                              class="d-none"
+                              type="radio"
+                              name="cover_type"
+                              checked />
+                          </label>
+                          <label for="radio--8-2" class="options--radio">
+                            <span>Both Sides</span>
+                            <input
+                              id="radio--8-2"
+                              class="d-none"
+                              type="radio"
+                              name="cover_type" />
+                          </label>
+                        </div>
+                        <!-- end regular wrap -->
+                      </div>
+                      <!-- end :op group -->
+                    </div>
+                    <!-- end col -->
+
+                    <!-- ================================ -->
+
+                    <!-- col -->
+                    <div class="col-6">
+                      <!-- :op title -->
+                      <h6 class="fs-13 text--alternative">
+                        Document Text Color
+                      </h6>
+
+                      <!-- :op options -->
+                      <div class="options--group d-block mb-4">
+                        <div class="options--regular">
+                          <label for="radio--9-1" class="options--radio active">
+                            <span>Black</span>
+                            <input
+                              id="radio--9-1"
+                              class="d-none"
+                              type="radio"
+                              name="cover_type"
+                              checked />
+                          </label>
+                          <label for="radio--9-2" class="options--radio">
+                            <span>Colorful</span>
+                            <input
+                              id="radio--9-2"
+                              class="d-none"
+                              type="radio"
+                              name="cover_type" />
+                          </label>
+                        </div>
+                        <!-- end regular wrap -->
+                      </div>
+                      <!-- end :op group -->
+                    </div>
+                    <!-- end col -->
+
+                    <!-- ================================ -->
+                    <!-- ================================ -->
+                    <!-- ================================ -->
+
+                    <!-- subtitle -->
+                    <div class="col-12">
+                      <h6 class="mt-4 mb-4 pb-2 options--subtitle fw-bold">
+                        Document Details
+                      </h6>
+                    </div>
+
+                    <!-- ================================ -->
+
+                    <!-- col -->
+                    <div class="col-6">
+                      <!-- :op title -->
+                      <h6 class="fs-13 text--alternative">Document Name</h6>
+                      <input
+                        class="form-control form--input mb-4"
+                        type="text"
+                        name=""
+                        id=""
+                        required />
+                    </div>
+                    <!-- end col -->
+
+                    <!-- ================================ -->
+
+                    <!-- col -->
+                    <div class="col-6">
+                      <!-- :op title -->
+                      <h6 class="fs-13 text--alternative">Grade</h6>
+                      <select
+                        name=""
+                        id=""
+                        class="form-control form--input form--select">
+                        <option value=""></option>
+                        <option value="">Bachelor</option>
+                        <option value="">Master</option>
+                        <option value="">PHD</option>
+                        <option value="">Other</option>
+                      </select>
+                    </div>
+                    <!-- end col -->
+
+                    <!-- ================================ -->
+
+                    <div class="col-12 text-end">
+                      <button
+                        class="btn btn-outline-primary px-5 rounded-1"
+                        style="margin-right: 5%">
+                        Send
+                      </button>
+                    </div>
+                  </div>
+                  <!-- end row -->
                 </div>
-        
-                <div class="col-sm-8">
-        
-                </div>
+                <!-- end card-body -->
+              </div>
+            </div>
+            <!-- end options column + card -->
 
-                </div>
-
-     </div>
-
-     
-
-
+            <!-- right column -->
+            <div class="col-sm-6"></div>
+          </div>
+          <!-- end row -->
+        </div>
+        <!-- end container -->
+      </div>
     </main>
+    <!-- end main + wrapper -->
+
+    <!-- ---------------------------------------- -->
 
     <footer>
-  <div class="container small border-top">
-    <div class="row py-5 d-flex justify-content-between">
+      <div class="container small border-top">
+        <div class="row py-5 d-flex justify-content-between">
+          <div class="col-12 col-lg-6 col-xl-6 border-end p-5">
+            <img src="img/logo.png" width="23" height="23" alt="" />
+            <address class="text-secondary mt-3">
+              <strong>1Pro Ltd.</strong><br />
+              Saudi Arabia, Jubail<br />
+              <abbr title="Phone">P:</abbr>
+              (966) 5000-575-18
+            </address>
+          </div>
 
-<div class="col-12 col-lg-6 col-xl-6 border-end p-5">
-<img src="img/logo.webp" width="23" height="23" alt="">    
-  <address class="text-secondary mt-3">
-    <strong>1Pro Ltd.</strong><br>
-    Saudi Arabia, Jubail<br>
-    <abbr title="Phone">P:</abbr>
-    (966) 5000-575-18
-  </address>
-</div>
+          <div class="col-12 col-lg-6 col-xl-6 border-end p-5">
+            <h3 class="h6 mb-3">Products</h3>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a
+                  class="nav-link link-secondary ps-0"
+                  href="https://1pro.sa/ar/%D8%A7%D9%84%D8%A3%D9%83%D9%88%D8%A7%D8%A8-cups/c1563639190"
+                  target="_blank"
+                  aria-current="page"
+                  href="#"
+                  >Cups</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link link-secondary ps-0"
+                  target="_blank"
+                  href="https://1pro.sa/ar/%D9%87%D8%AF%D8%A7%D9%8A%D8%A7-%D8%AF%D8%B9%D8%A7%D8%A6%D9%8A%D8%A9-promotional-gift/c506140705"
+                  >Gifts</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link link-secondary ps-0"
+                  target="_blank"
+                  href="https://1pro.sa/ar/%D8%AA%D9%8A%D8%B4%D8%B1%D8%AA%D8%A7%D8%AA-t-shirt/c55975573"
+                  >Shirts</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link link-secondary ps-0"
+                  target="_blank"
+                  href="https://1pro.sa/ar/%D8%A7%D9%84%D9%85%D9%86%D8%A7%D8%B3%D8%A8%D8%A7%D8%AA-occasions/c1063329898"
+                  >Occasions</a
+                >
+              </li>
 
-<div class="col-12 col-lg-6 col-xl-6 border-end p-5">
-  <h3 class="h6 mb-3">Products</h3>
-  <ul class="nav flex-column">
-    <li class="nav-item">
-      <a class="nav-link link-secondary ps-0" href="https://1pro.sa/ar/%D8%A7%D9%84%D8%A3%D9%83%D9%88%D8%A7%D8%A8-cups/c1563639190" target="_blank" aria-current="page" href="#">Cups</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link link-secondary ps-0" target="_blank" href="https://1pro.sa/ar/%D9%87%D8%AF%D8%A7%D9%8A%D8%A7-%D8%AF%D8%B9%D8%A7%D8%A6%D9%8A%D8%A9-promotional-gift/c506140705">Gifts</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link link-secondary ps-0" target="_blank" href="https://1pro.sa/ar/%D8%AA%D9%8A%D8%B4%D8%B1%D8%AA%D8%A7%D8%AA-t-shirt/c55975573">Shirts</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link link-secondary ps-0" target="_blank" href="https://1pro.sa/ar/%D8%A7%D9%84%D9%85%D9%86%D8%A7%D8%B3%D8%A8%D8%A7%D8%AA-occasions/c1063329898">Occasions</a>
-    </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link link-secondary ps-0"
+                  target="_blank"
+                  href="https://1pro.sa/ar/%D8%A7%D9%84%D8%B9%D8%A7%D8%A8-toys/c1652256715"
+                  >Toys</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-    <li class="nav-item">
-      <a class="nav-link link-secondary ps-0" target="_blank" href="https://1pro.sa/ar/%D8%A7%D9%84%D8%B9%D8%A7%D8%A8-toys/c1652256715">Toys</a>
-    </li>
-  </ul>
-</div>
-
-</div>
-</div>
-
-<div class="container text-center py-3 small">Made by <a href="#" class="link-fancy" target="_blank">1Pro Developers</a>
-</div>
-</footer>
+      <div class="container text-center py-3 small">
+        Made by
+        <a href="#" class="link-fancy" target="_blank">1Pro Developers</a>
+      </div>
+    </footer>
 
     <script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/aos.js"></script>
- <script>
- AOS.init({
-   duration: 800, // values from 0 to 3000, with step 50ms
- });
- </script>
+    <script src="js/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800, // values from 0 to 3000, with step 50ms
+      });
+    </script>
 
- <script>
-  let scrollpos = window.scrollY
-  const header = document.querySelector(".navbar")
-  const header_height = header.offsetHeight
+    <script>
+      let scrollpos = window.scrollY;
+      const header = document.querySelector('.navbar');
+      const header_height = header.offsetHeight;
 
-  const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm")
-  const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm")
+      const add_class_on_scroll = () =>
+        header.classList.add('scrolled', 'shadow-sm');
+      const remove_class_on_scroll = () =>
+        header.classList.remove('scrolled', 'shadow-sm');
 
-  window.addEventListener('scroll', function() {
-    scrollpos = window.scrollY;
+      window.addEventListener('scroll', function () {
+        scrollpos = window.scrollY;
 
-    if (scrollpos >= header_height) { add_class_on_scroll() }
-    else { remove_class_on_scroll() }
+        if (scrollpos >= header_height) {
+          add_class_on_scroll();
+        } else {
+          remove_class_on_scroll();
+        }
 
-    console.log(scrollpos)
-  })
-</script>
-
+        console.log(scrollpos);
+      });
+    </script>
   </body>
 </html>

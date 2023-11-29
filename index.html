@@ -1,557 +1,890 @@
-<!doctype html>
+<!DOCTYPE html>
 <html class="h-100" lang="en">
-
   <head>
-      <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
-  <meta name="description" content="1Pro for printing services">
-  <link rel="apple-touch-icon" sizes="180x180" href="img/logo.webp">
-  <link rel="icon" type="image/png" sizes="32x32" href="img/logo.webp">
-  <link rel="icon" type="image/png" sizes="16x16" href="img/logo.webp">
-  <link rel="icon" type="image/png" sizes="96x96" href="img/logo.webp">
-  <meta name="author" content="Holger Koenemann">
-  <meta name="generator" content="Eleventy v2.0.0">
-  <meta name="HandheldFriendly" content="true">
-  <title>1Pro For Printing Services</title>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,shrink-to-fit=no" />
+    <meta name="description" content="1Pro for printing services" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/logo.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="img/logo.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/logo.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="img/logo.png" />
+    <meta name="author" content="Holger Koenemann" />
+    <meta name="generator" content="Eleventy v2.0.0" />
+    <meta name="HandheldFriendly" content="true" />
+    <title>1Pro For Printing Services</title>
 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous" />
 
-  <link rel="stylesheet" href="css/theme.min.css">
+    <link rel="stylesheet" href="css/theme.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
 
-   <style>
+    <style>
+      /* inter-300 - latin */
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 300;
+        font-display: swap;
+        src: local(''), url('./fonts/inter-v12-latin-300.woff2') format('woff2'),
+          /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('./fonts/inter-v12-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      }
 
-/* inter-300 - latin */
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: local(''),
-       url('./fonts/inter-v12-latin-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('./fonts/inter-v12-latin-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: local(''),
-       url('./fonts/inter-v12-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('./fonts/inter-v12-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: local(''),
-       url('./fonts/inter-v12-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
-       url('./fonts/inter-v12-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-</style>
-
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-display: swap;
+        src: local(''), url('./fonts/inter-v12-latin-500.woff2') format('woff2'),
+          /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('./fonts/inter-v12-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      }
+      @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-display: swap;
+        src: local(''), url('./fonts/inter-v12-latin-700.woff2') format('woff2'),
+          /* Chrome 26+, Opera 23+, Firefox 39+ */
+            url('./fonts/inter-v12-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+      }
+    </style>
   </head>
 
   <body data-bs-spy="scroll" data-bs-target="#navScroll">
+    <nav
+      id="navScroll"
+      class="navbar navbar-expand-lg navbar-light fixed-top"
+      tabindex="0">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="img/logo.png"
+            style="height: 50px"
+            class="of-contain w-100" />
+        </a>
 
-    <nav id="navScroll" class="navbar navbar-expand-lg navbar-light fixed-top" tabindex="0">
-  <div class="container">
-    <a class="navbar-brand pe-4 fs-4" href="index.html">
-  <img src="img/logo.webp" width="32" height="32" alt="">
-  <span class="ms-1 fw-bolder">1Pro</span>
-</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#services"
+                aria-label="Brings you to the frontpage">
+                Services
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#aboutus"> About us </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#numbers"> Numbers </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#gallery"> Gallery </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#workwithus"> Work with us </a>
+            </li>
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-      <li class="nav-item">
-    <a class="nav-link" href="#services" aria-label="Brings you to the frontpage">
-      Services
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#aboutus">
-      About us
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#numbers">
-      Numbers
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#gallery">
-      Gallery
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#workwithus">
-      Work with us
-    </a>
-  </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonials"> Testimonials </a>
+            </li>
 
-  <li class="nav-item">
-    <a class="nav-link" href="#testimonials">
-      Testimonials
-    </a>
-  </li>
-
-
-  <li class="nav-item">
-    <a class="nav-link" href="order.html">
-
-      <button class="btn btn-danger" style="background-color: rgb(230, 75, 75);">
-
-        Order Now!
-
-      </button>
-     
-    </a>
-  </li>
-
-    </ul>
-      
-
-    </div>
-</div>
-</nav>
+            <li class="nav-item">
+              <a
+                class="nav-link rounded-1 text-white px-3"
+                href="order.html"
+                style="background-color: rgb(230, 75, 75)">
+                Order Now!
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
     <main>
       <div class="w-100 overflow-hidden bg-gray-100" id="top">
-  
-<div class="container position-relative">
-  <div  class="col-12 col-lg-8 mt-0 h-100 position-absolute top-0 end-0 bg-cover" data-aos="fade-left" style="background-image: url(img/hero3.jpg); border: 2px solid rgb(230, 75, 75);">
-    
-  </div>
-    <div class="row">
-
-<div class="col-lg-7 py-vh-6 position-relative" data-aos="fade-right">
-  <h1 class="display-1 fw-bold mt-5">The one and only professional</h1>
-  <p class="lead">We provide the best services in printing with professional workers and printers.</p>
-</div>
-
-
-
-</div>
-</div>
-
-</div>
-
-<div class="py-vh-5 w-100 overflow-hidden" id="services">
-  <div class="container">
-      <div class="row d-flex justify-content-end">
-<div class="col-lg-8" data-aos="fade-down"><h2 class="display-6">Okay, there are three really good steps for ordering. There are no more than three, but we think three is a reasonable good number of good stuff.</h2></div>
-</div>
-<div class="row d-flex align-items-center">
-<div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-  <span class="h5 fw-lighter">01.</span>
-  <h3 class="py-5 border-top border-dark" style="color: rgb(245, 62, 62)">Browse</h3>
-  <p>You can browse all of our products and see the new offers and the new sections we add.</p>
- 
-</div>
-
-<div class="col-md-6 col-lg-4 py-vh-4 pb-0" data-aos="fade-up" data-aos-delay="400">
-  <span class="h5 fw-lighter">02.</span>
-  <h3 class="py-5 border-top border-dark" style="color: rgb(245, 62, 62)">Choose your service</h3>
-  <p>Select the service that you want to order from many services that we provided. </p>
-
- 
-</div>
-
-<div class="col-md-6 col-lg-4 py-vh-6 pb-0" data-aos="fade-up" data-aos-delay="600">
-  <span class="h5 fw-lighter">03.</span>
-  <h3 class="py-5 border-top border-dark" style="color: rgb(245, 62, 62)">Online payment</h3>
-  <p>You can pay online via online payment services that we provide. </p>
- 
-</div>
-</div>
-
-  </div>
-</div>
-
-<div class="py-vh-4 bg-gray-100 w-100 overflow-hidden" id="aboutus">
-  <div class="container">
-      
-<div class="row d-flex justify-content-between align-items-center">
-  <div class="col-lg-6">
-  <div class="row gx-5 d-flex">
-    <div class="col-md-11">
-      <div class="shadow ratio ratio-16x9 rounded bg-cover bp-center align-self-end" data-aos="fade-right" style="background-image: url(img/side1.jpg);--bs-aspect-ratio: 50%; border:1px solid rgb(230, 75, 75);">
-      </div>
-    </div>
-    <div class="col-md-5 offset-md-1">
-      <div class="shadow ratio ratio-1x1 rounded bg-cover mt-5 bp-center float-end" data-aos="fade-up" style="background-image: url(img/side2.jpg); border:1px solid rgb(230, 75, 75);">
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="col-12 shadow ratio rounded bg-cover mt-5 bp-center" data-aos="fade-left" style="background-image: url(img/side3.jpg);--bs-aspect-ratio: 150%; border:1px solid rgb(230, 75, 75);">
-      </div>
-    </div>
-  </div>
-</div>
-<div class="col-lg-4">
-  <h3 class="py-5 border-top border-dark" data-aos="fade-left">We did some interesting stuff in our field of work. For example you can choose your order design and pay online and then pickup or deliver your order.</h3>
- 
-  <p>
-    <a href="order.html" style="color: rgb(207, 51, 51)" class="link-fancy"  data-aos="fade-left" data-aos-delay="400">Order Now!
-    </a>
-  </p>
-</div>
-</div>
-
-  </div>
-</div>
-
-<div class="py-vh-5 w-100 overflow-hidden" id="numbers">
-  <div class="container">
-      <div class="row d-flex justify-content-between align-items-center">
-  <div class="col-lg-5">
-    <h3 class="py-5 border-top border-dark" style="color: rgb(247, 64, 64);" data-aos="fade-right">Our magic numbers</h3>
-</div>
-<div class="col-lg-6">
-  <div class="row">
-    <div class="col-12">
-    <h2 class="display-6 mb-5" data-aos="fade-down">There are some important numbers for us. They are just numbers without any meaning, but we just love them.</h2>
-    </div>
-    <div class="col-lg-6" data-aos="fade-up">
-      <div class="display-1 fw-bold py-4" style="color: rgb(247, 64, 64);">42%</div>
-      <p class="text-black-50">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-    </div>
-    <div class="col-lg-6" data-aos="fade-up">
-      <div class="display-1 fw-bold py-4" style="color: rgb(247, 64, 64);">+300</div>
-      <p class="text-black-50">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-    </div>
-  </div>
-</div>
-</div>
-
-  </div>
-</div>
-
-<div class="position-relative overflow-hidden w-100 bg-light" id="gallery">
-  <div class="container-fluid">
-  <div class="row overflow-scroll">
-    <div class="col-12">
-      <div class="row vw-100 px-0 py-vh-5 d-flex align-items-center scrollx">
-        <div class="col-md-2" data-aos="fade-up">
-            <img src="img/work1.webp" style="border:1px solid rgb(230, 75, 75);" class="rounded shadow img-fluid" alt="nice gallery image" width="512" height="341">
-        </div>
-
-        <div class="col-md-2" data-aos="fade-up" data-aos-delay="200">
-            <img src="img/work2.jpg" style="border:1px solid rgb(230, 75, 75);" class="img-fluid rounded shadow" alt="nice gallery image" width="1164" height="776">
-        </div>
-
-        <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
-            <img src="img/work4.webp" style="border:1px solid rgb(230, 75, 75);" class="img-fluid rounded shadow" alt="nice gallery image" width="844" height="1054">
-        </div>
-
-        <div class="col-md-3" data-aos="fade-up" data-aos-delay="600">
-            <img src="img/work3.webp" style="border:1px solid rgb(230, 75, 75);" class="img-fluid rounded shadow" alt="nice gallery image" width="844" height="562">
-        </div>
-
-        <div class="col-md-2" data-aos="fade-up" data-aos-delay="800">
-            <img src="img/work5.webp" style="border:1px solid rgb(230, 75, 75);" class="rounded shadow img-fluid" alt="nice gallery image" width="512" height="341">
-        </div>
-      </div>
-    </div>
-   </div>
- </div>
-
-</div>
-
-<div class="container py-vh-4 w-100 overflow-hidden">
-  <div class="row d-flex justify-content-center align-items-center">
-    <div class="col-lg-5">
-  <h3 class="py-5 border-top border-dark" data-aos="fade-right">What our clients say</h3>
-</div>
-<div class="col-md-7" data-aos="fade-left">
-  <blockquote>
-    <div class="fs-4 my-3 fw-light pt-4 border-bottom pb-3">“I´am the CEO of this company. So maybe you think "he will tell us something super awesome about it only". But no. Its a really strange place to work with creepy people all around.
-      They do some computer stuff I don´t understand. But I wear expensive Glasses and a Patagonia Hoodie. So I´am fine with it.”</div>
-    <img src="img/webp/person11.webp" width="64" height="64" class="img-fluid rounded-circle me-3" alt="" data-aos="fade">
-    <span><span class="fw-bold">Ali,</span>
-      CEO of 1Pro Ltd.</span>
-  </blockquote>
-</div>
-
-  </div>
-</div>
-
-<div class="py-vh-6 bg-gray-900 text-light w-100 overflow-hidden" id="workwithus">
-  <div class="container">
-    <div class="row d-flex justify-content-center">
-      <div class="row d-flex justify-content-center text-center">
-  <div class="col-lg-8 text-center" data-aos="fade">
-        <p class="text-secondary lead">Let´s start a project together!</p>
-    <h2 class="display-6 mb-5">This button is linked to our website on <span style="font-weight: bold;">SALLA</span>  platform. You can take a look even more there and browse all of our products and services and WE will be happy to start working with you :)</h2>
-  </div>
-  <div class="col-12">
-    <a target="_blank" href="https://1pro.sa" class="btn btn-warning btn-xl shadow me-3 mt-4" data-aos="fade-down">Let's get started</a>
-  </div>
-</div>
-
-    </div>
-  </div>
-</div>
-
-<div class="bg-light w-100 overflow-hidden" id="testimonials">
-  <div class="container py-vh-6">
-    <div class="row d-flex justify-content-center">
-      <div class="col-12 col-lg-10 col-xl-8 text-center">
-  <h2 class="display-6">Loved by people all around the globe</h2>
-  <p class="lead">Our spaces and offices are soooooo lovely, no one would give us a negative rating! And look at these trustworthy avatar pictures! Trust us!</p>
-</div>
-<div class="col-12 mt-4">
-  <div class="row row-cols-1 row-cols-md-2 g-5 d-flex align-items-center">
-
-    <div class="col-12 col-lg-6 col-xl-4" data-aos="fade-right">
-      <div class="card p-4 mt-3 border-0">
-        <div class="card-body">
-          <div class="text-dark py-2 fs-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-</svg>
-</div>
-          <blockquote class="blockquote">
-            <p>"ممتاز, سرعة بالتنفقذ بالتوصيل "</p>
-          </blockquote>
-          <div class="d-flex justify-content-between border-top pt-3">
-            <div>
-              <span class="h6 fw-5">Nuraah Muhammad</span><br>
-              <small class="text-muted">Client</small>
+        <div class="container position-relative">
+          <div
+            class="col-12 col-lg-8 mt-0 h-100 position-absolute top-0 end-0 bg-cover"
+            data-aos="fade-left"
+            style="
+              background-image: url(img/hero3.jpg);
+              border: 2px solid rgb(230, 75, 75);
+            "></div>
+          <div class="row">
+            <div
+              class="col-lg-7 py-vh-6 position-relative"
+              data-aos="fade-right">
+              <h1 class="display-1 fw-bold mt-5">
+                The one and only professional
+              </h1>
+              <p class="lead">
+                We provide the best services in printing with professional
+                workers and printers.
+              </p>
             </div>
-            <img src="img/webp/person9.webp" width="48" height="48" class="rounded-circle" alt="" data-aos="fade">
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="col-12 col-lg-6 col-xl-4">
-      <div class="card p-4 shadow mt-3 border-0" data-aos="fade-down">
-        <div class="card-body">
-          <div class="text-dark py-2 fs-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-</svg>
+      <div class="py-vh-5 w-100 overflow-hidden" id="services">
+        <div class="container">
+          <div class="row d-flex justify-content-end">
+            <div class="col-lg-8" data-aos="fade-down">
+              <h2 class="display-6">
+                Okay, there are three really good steps for ordering. There are
+                no more than three, but we think three is a reasonable good
+                number of good stuff.
+              </h2>
+            </div>
+          </div>
+          <div class="row d-flex align-items-center">
+            <div
+              class="col-md-6 col-lg-4"
+              data-aos="fade-up"
+              data-aos-delay="200">
+              <span class="h5 fw-lighter">01.</span>
+              <h3
+                class="py-5 border-top border-dark"
+                style="color: rgb(245, 62, 62)">
+                Browse
+              </h3>
+              <p>
+                You can browse all of our products and see the new offers and
+                the new sections we add.
+              </p>
+            </div>
 
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-</svg>
+            <div
+              class="col-md-6 col-lg-4 py-vh-4 pb-0"
+              data-aos="fade-up"
+              data-aos-delay="400">
+              <span class="h5 fw-lighter">02.</span>
+              <h3
+                class="py-5 border-top border-dark"
+                style="color: rgb(245, 62, 62)">
+                Choose your service
+              </h3>
+              <p>
+                Select the service that you want to order from many services
+                that we provided.
+              </p>
+            </div>
 
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-</svg>
-</div>
-          <blockquote class="blockquote">
-            <p>"إتقان و دقة و سرعة في التنفيذ, ما راح يكون اخر تعامل بإذن الله"</p>
-          </blockquote>
-          <div class="d-flex justify-content-between border-top pt-3">
-            <p class="card-text">
-              <span class="h6 fw-5">ريم سالم</span><br>
-              <small class="text-muted">Client</small>
-            </p>
-            <img src="img/webp/person3.webp" width="48" height="48" class="rounded-circle" alt="" data-aos="fade">
+            <div
+              class="col-md-6 col-lg-4 py-vh-6 pb-0"
+              data-aos="fade-up"
+              data-aos-delay="600">
+              <span class="h5 fw-lighter">03.</span>
+              <h3
+                class="py-5 border-top border-dark"
+                style="color: rgb(245, 62, 62)">
+                Online payment
+              </h3>
+              <p>
+                You can pay online via online payment services that we provide.
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="col-12 col-lg-6 col-xl-4">
-      <div class="card p-4 mt-3 border-0" data-aos="fade-left">
-        <div class="card-body">
-          <div class="text-dark py-2 fs-3"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-</svg>
+      <div class="py-vh-4 bg-gray-100 w-100 overflow-hidden" id="aboutus">
+        <div class="container">
+          <div class="row d-flex justify-content-between align-items-center">
+            <div class="col-lg-6">
+              <div class="row gx-5 d-flex">
+                <div class="col-md-11">
+                  <div
+                    class="shadow ratio ratio-16x9 rounded bg-cover bp-center align-self-end"
+                    data-aos="fade-right"
+                    style="
+                      background-image: url(img/side1.jpg);
+                      --bs-aspect-ratio: 50%;
+                      border: 1px solid rgb(230, 75, 75);
+                    "></div>
+                </div>
+                <div class="col-md-5 offset-md-1">
+                  <div
+                    class="shadow ratio ratio-1x1 rounded bg-cover mt-5 bp-center float-end"
+                    data-aos="fade-up"
+                    style="
+                      background-image: url(img/side2.jpg);
+                      border: 1px solid rgb(230, 75, 75);
+                    "></div>
+                </div>
+                <div class="col-md-6">
+                  <div
+                    class="col-12 shadow ratio rounded bg-cover mt-5 bp-center"
+                    data-aos="fade-left"
+                    style="
+                      background-image: url(img/side3.jpg);
+                      --bs-aspect-ratio: 150%;
+                      border: 1px solid rgb(230, 75, 75);
+                    "></div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <h3 class="py-5 border-top border-dark" data-aos="fade-left">
+                We did some interesting stuff in our field of work. For example
+                you can choose your order design and pay online and then pickup
+                or deliver your order.
+              </h3>
 
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-</svg>
-
-<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star-fill" viewBox="0 0 16 16">
-  <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
-</svg>
-</div>
-          <blockquote class="blockquote">
-            <p>"ممتاز جدا جودة و طباعة"</p>
-          </blockquote>
-          <div class="d-flex justify-content-between border-top pt-3">
-            <p class="card-text">
-              <span class="h6 fw-5">غدي المياح </span><br>
-              <small class="text-muted">Client</small>
-            </p>
-            <img src="img/webp/person8.webp" width="48" height="48" class="rounded-circle" alt="" data-aos="fade">
+              <p>
+                <a
+                  href="order.html"
+                  style="color: rgb(207, 51, 51)"
+                  class="link-fancy"
+                  data-aos="fade-left"
+                  data-aos-delay="400"
+                  >Order Now!
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    
+      <div class="py-vh-5 w-100 overflow-hidden" id="numbers">
+        <div class="container">
+          <div class="row d-flex justify-content-between align-items-center">
+            <div class="col-lg-5">
+              <h3
+                class="py-5 border-top border-dark"
+                style="color: rgb(247, 64, 64)"
+                data-aos="fade-right">
+                Our magic numbers
+              </h3>
+            </div>
+            <div class="col-lg-6">
+              <div class="row">
+                <div class="col-12">
+                  <h2 class="display-6 mb-5" data-aos="fade-down">
+                    There are some important numbers for us. They are just
+                    numbers without any meaning, but we just love them.
+                  </h2>
+                </div>
+                <div class="col-lg-6" data-aos="fade-up">
+                  <div
+                    class="display-1 fw-bold py-4"
+                    style="color: rgb(247, 64, 64)">
+                    42%
+                  </div>
+                  <p class="text-black-50">
+                    Donec id elit non mi porta gravida at eget metus. Fusce
+                    dapibus, tellus ac cursus commodo, tortor mauris condimentum
+                    nibh, ut fermentum massa justo sit amet risus. Etiam porta
+                    sem malesuada magna mollis euismod. Donec sed odio dui.
+                  </p>
+                </div>
+                <div class="col-lg-6" data-aos="fade-up">
+                  <div
+                    class="display-1 fw-bold py-4"
+                    style="color: rgb(247, 64, 64)">
+                    +300
+                  </div>
+                  <p class="text-black-50">
+                    Donec id elit non mi porta gravida at eget metus. Fusce
+                    dapibus, tellus ac cursus commodo, tortor mauris condimentum
+                    nibh, ut fermentum massa justo sit amet risus. Etiam porta
+                    sem malesuada magna mollis euismod. Donec sed odio dui.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  </div>
-</div>
+      <div
+        class="position-relative overflow-hidden w-100 bg-light"
+        id="gallery">
+        <div class="container-fluid">
+          <div class="row overflow-scroll">
+            <div class="col-12">
+              <div
+                class="row vw-100 px-0 py-vh-5 d-flex align-items-center scrollx">
+                <div class="col-md-2" data-aos="fade-up">
+                  <img
+                    src="img/work1.webp"
+                    style="border: 1px solid rgb(230, 75, 75)"
+                    class="rounded shadow img-fluid"
+                    alt="nice gallery image"
+                    width="512"
+                    height="341" />
+                </div>
 
-    </div>
-  </div>
-</div>
+                <div class="col-md-2" data-aos="fade-up" data-aos-delay="200">
+                  <img
+                    src="img/work2.jpg"
+                    style="border: 1px solid rgb(230, 75, 75)"
+                    class="img-fluid rounded shadow"
+                    alt="nice gallery image"
+                    width="1164"
+                    height="776" />
+                </div>
 
-<div class="small py-vh-3 w-100 overflow-hidden">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6 col-lg-4 border-end" data-aos="fade-up">
-  <div class="d-flex">
-    <div class="col-md-3 flex-fill pt-3 pe-3 pe-md-0">
-      <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-box-seam" viewbox="0 0 16 16">
-        <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2l-2.218-.887zm3.564 1.426L5.596 5 8 5.961 14.154 3.5l-2.404-.961zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z"/>
-      </svg>
-    </div>
-    <div class="col-md-9 flex-fill">
-      <h3 class="h5 my-2">Pickup And Delivery</h3>
-      <p>You can pickup your order or we can deliver your order to any where around the world.</p>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
+                  <img
+                    src="img/work4.webp"
+                    style="border: 1px solid rgb(230, 75, 75)"
+                    class="img-fluid rounded shadow"
+                    alt="nice gallery image"
+                    width="844"
+                    height="1054" />
+                </div>
 
-    </div>
-  </div>
-</div>
-<div class="col-md-6 col-lg-4 border-end" data-aos="fade-up" data-aos-delay="200">
-  <div class="d-flex">
-    <div class="col-md-3 flex-fill pt-3 pt-3 pe-3 pe-md-0">
-      <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-card-checklist" viewbox="0 0 16 16">
-        <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
-        <path d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0zM7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z"/>
-      </svg>
-    </div>
-    <div class="col-md-9 flex-fill">
-      <h3 class="h5 my-2">Quality Check</h3>
-      <p>Our products made with high quality and unique designs.</p>
-    </div>
-  </div>
-</div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="600">
+                  <img
+                    src="img/work3.webp"
+                    style="border: 1px solid rgb(230, 75, 75)"
+                    class="img-fluid rounded shadow"
+                    alt="nice gallery image"
+                    width="844"
+                    height="562" />
+                </div>
 
-<div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
-  <div class="d-flex">
-    <div class="col-md-3 flex-fill pt-3 pt-3 pe-3 pe-md-0">
-      <svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" fill="currentColor" class="bi bi-window-sidebar" viewbox="0 0 16 16">
-        <path d="M2.5 4a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm2-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm1 .5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z"/>
-        <path d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v2H1V3a1 1 0 0 1 1-1h12zM1 13V6h4v8H2a1 1 0 0 1-1-1zm5 1V6h9v7a1 1 0 0 1-1 1H6z"/>
-      </svg>
-    </div>
-    <div class="col-md-9 flex-fill">
-      <h3 class="h5 my-2">Full Support</h3>
-      <p>We will provide support 24/7.</p>
-    </div>
-  </div>
-</div>
+                <div class="col-md-2" data-aos="fade-up" data-aos-delay="800">
+                  <img
+                    src="img/work5.webp"
+                    style="border: 1px solid rgb(230, 75, 75)"
+                    class="rounded shadow img-fluid"
+                    alt="nice gallery image"
+                    width="512"
+                    height="341" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    </div>
-  </div>
-</div>
+      <div class="container py-vh-4 w-100 overflow-hidden">
+        <div class="row d-flex justify-content-center align-items-center">
+          <div class="col-lg-5">
+            <h3 class="py-5 border-top border-dark" data-aos="fade-right">
+              What our clients say
+            </h3>
+          </div>
+          <div class="col-md-7" data-aos="fade-left">
+            <blockquote>
+              <div class="fs-4 my-3 fw-light pt-4 border-bottom pb-3">
+                “I´am the CEO of this company. So maybe you think "he will tell
+                us something super awesome about it only". But no. Its a really
+                strange place to work with creepy people all around. They do
+                some computer stuff I don´t understand. But I wear expensive
+                Glasses and a Patagonia Hoodie. So I´am fine with it.”
+              </div>
+              <img
+                src="img/webp/person11.webp"
+                width="64"
+                height="64"
+                class="img-fluid rounded-circle me-3"
+                alt=""
+                data-aos="fade" />
+              <span><span class="fw-bold">Ali,</span> CEO of 1Pro Ltd.</span>
+            </blockquote>
+          </div>
+        </div>
+      </div>
 
+      <div
+        class="py-vh-6 bg-gray-900 text-light w-100 overflow-hidden"
+        id="workwithus">
+        <div class="container">
+          <div class="row d-flex justify-content-center">
+            <div class="row d-flex justify-content-center text-center">
+              <div class="col-lg-8 text-center" data-aos="fade">
+                <p class="text-secondary lead">
+                  Let´s start a project together!
+                </p>
+                <h2 class="display-6 mb-5">
+                  This button is linked to our website on
+                  <span style="font-weight: bold">SALLA</span> platform. You can
+                  take a look even more there and browse all of our products and
+                  services and WE will be happy to start working with you :)
+                </h2>
+              </div>
+              <div class="col-12">
+                <a
+                  target="_blank"
+                  href="https://1pro.sa"
+                  class="btn btn-warning btn-xl shadow me-3 mt-4"
+                  data-aos="fade-down"
+                  >Let's get started</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <div class="bg-light w-100 overflow-hidden" id="testimonials">
+        <div class="container py-vh-6">
+          <div class="row d-flex justify-content-center">
+            <div class="col-12 col-lg-10 col-xl-8 text-center">
+              <h2 class="display-6">Loved by people all around the globe</h2>
+              <p class="lead">
+                Our spaces and offices are soooooo lovely, no one would give us
+                a negative rating! And look at these trustworthy avatar
+                pictures! Trust us!
+              </p>
+            </div>
+            <div class="col-12 mt-4">
+              <div
+                class="row row-cols-1 row-cols-md-2 g-5 d-flex align-items-center">
+                <div class="col-12 col-lg-6 col-xl-4" data-aos="fade-right">
+                  <div class="card p-4 mt-3 border-0">
+                    <div class="card-body">
+                      <div class="text-dark py-2 fs-3">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-star-fill"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
 
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-star-fill"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-star-fill"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-star-fill"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-star-fill"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                      </div>
+                      <blockquote class="blockquote">
+                        <p>"ممتاز, سرعة بالتنفقذ بالتوصيل "</p>
+                      </blockquote>
+                      <div
+                        class="d-flex justify-content-between border-top pt-3">
+                        <div>
+                          <span class="h6 fw-5">Nuraah Muhammad</span><br />
+                          <small class="text-muted">Client</small>
+                        </div>
+                        <img
+                          src="img/webp/person9.webp"
+                          width="48"
+                          height="48"
+                          class="rounded-circle"
+                          alt=""
+                          data-aos="fade" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-lg-6 col-xl-4">
+                  <div
+                    class="card p-4 shadow mt-3 border-0"
+                    data-aos="fade-down">
+                    <div class="card-body">
+                      <div class="text-dark py-2 fs-3">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-star-fill"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-star-fill"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-star-fill"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-star-fill"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-star-fill"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                      </div>
+                      <blockquote class="blockquote">
+                        <p>
+                          "إتقان و دقة و سرعة في التنفيذ, ما راح يكون اخر تعامل
+                          بإذن الله"
+                        </p>
+                      </blockquote>
+                      <div
+                        class="d-flex justify-content-between border-top pt-3">
+                        <p class="card-text">
+                          <span class="h6 fw-5">ريم سالم</span><br />
+                          <small class="text-muted">Client</small>
+                        </p>
+                        <img
+                          src="img/webp/person3.webp"
+                          width="48"
+                          height="48"
+                          class="rounded-circle"
+                          alt=""
+                          data-aos="fade" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-12 col-lg-6 col-xl-4">
+                  <div class="card p-4 mt-3 border-0" data-aos="fade-left">
+                    <div class="card-body">
+                      <div class="text-dark py-2 fs-3">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-star-fill"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-star-fill"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-star-fill"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-star-fill"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="16"
+                          height="16"
+                          fill="currentColor"
+                          class="bi bi-star-fill"
+                          viewBox="0 0 16 16">
+                          <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                        </svg>
+                      </div>
+                      <blockquote class="blockquote">
+                        <p>"ممتاز جدا جودة و طباعة"</p>
+                      </blockquote>
+                      <div
+                        class="d-flex justify-content-between border-top pt-3">
+                        <p class="card-text">
+                          <span class="h6 fw-5">غدي المياح </span><br />
+                          <small class="text-muted">Client</small>
+                        </p>
+                        <img
+                          src="img/webp/person8.webp"
+                          width="48"
+                          height="48"
+                          class="rounded-circle"
+                          alt=""
+                          data-aos="fade" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="small py-vh-3 w-100 overflow-hidden">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-lg-4 border-end" data-aos="fade-up">
+              <div class="d-flex">
+                <div class="col-md-3 flex-fill pt-3 pe-3 pe-md-0">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="42"
+                    height="42"
+                    fill="currentColor"
+                    class="bi bi-box-seam"
+                    viewbox="0 0 16 16">
+                    <path
+                      d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2l-2.218-.887zm3.564 1.426L5.596 5 8 5.961 14.154 3.5l-2.404-.961zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923l6.5 2.6zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464L7.443.184z" />
+                  </svg>
+                </div>
+                <div class="col-md-9 flex-fill">
+                  <h3 class="h5 my-2">Pickup And Delivery</h3>
+                  <p>
+                    You can pickup your order or we can deliver your order to
+                    any where around the world.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-md-6 col-lg-4 border-end"
+              data-aos="fade-up"
+              data-aos-delay="200">
+              <div class="d-flex">
+                <div class="col-md-3 flex-fill pt-3 pt-3 pe-3 pe-md-0">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="42"
+                    height="42"
+                    fill="currentColor"
+                    class="bi bi-card-checklist"
+                    viewbox="0 0 16 16">
+                    <path
+                      d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z" />
+                    <path
+                      d="M7 5.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 1 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0zM7 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5zm-1.496-.854a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0l-.5-.5a.5.5 0 0 1 .708-.708l.146.147 1.146-1.147a.5.5 0 0 1 .708 0z" />
+                  </svg>
+                </div>
+                <div class="col-md-9 flex-fill">
+                  <h3 class="h5 my-2">Quality Check</h3>
+                  <p>Our products made with high quality and unique designs.</p>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="col-md-6 col-lg-4"
+              data-aos="fade-up"
+              data-aos-delay="400">
+              <div class="d-flex">
+                <div class="col-md-3 flex-fill pt-3 pt-3 pe-3 pe-md-0">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="42"
+                    height="42"
+                    fill="currentColor"
+                    class="bi bi-window-sidebar"
+                    viewbox="0 0 16 16">
+                    <path
+                      d="M2.5 4a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1zm2-.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0zm1 .5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1z" />
+                    <path
+                      d="M2 1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2H2zm12 1a1 1 0 0 1 1 1v2H1V3a1 1 0 0 1 1-1h12zM1 13V6h4v8H2a1 1 0 0 1-1-1zm5 1V6h9v7a1 1 0 0 1-1 1H6z" />
+                  </svg>
+                </div>
+                <div class="col-md-9 flex-fill">
+                  <h3 class="h5 my-2">Full Support</h3>
+                  <p>We will provide support 24/7.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
     <footer>
-  <div class="container small border-top">
-    <div class="row py-5 d-flex justify-content-between">
+      <div class="container small border-top">
+        <div class="row py-5 d-flex justify-content-between">
+          <div class="col-12 col-lg-6 col-xl-6 border-end p-5">
+            <img src="img/logo.png" width="23" height="23" alt="" />
+            <address class="text-secondary mt-3">
+              <strong>1Pro Ltd.</strong><br />
+              Saudi Arabia, Jubail<br />
+              <abbr title="Phone">P:</abbr>
+              (966) 5000-575-18
+            </address>
+          </div>
 
-<div class="col-12 col-lg-6 col-xl-6 border-end p-5">
-<img src="img/logo.webp" width="23" height="23" alt="">    
-  <address class="text-secondary mt-3">
-    <strong>1Pro Ltd.</strong><br>
-    Saudi Arabia, Jubail<br>
-    <abbr title="Phone">P:</abbr>
-    (966) 5000-575-18
-  </address>
-</div>
+          <div class="col-12 col-lg-6 col-xl-6 border-end p-5">
+            <h3 class="h6 mb-3">Products</h3>
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a
+                  class="nav-link link-secondary ps-0"
+                  href="https://1pro.sa/ar/%D8%A7%D9%84%D8%A3%D9%83%D9%88%D8%A7%D8%A8-cups/c1563639190"
+                  target="_blank"
+                  aria-current="page"
+                  href="#"
+                  >Cups</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link link-secondary ps-0"
+                  target="_blank"
+                  href="https://1pro.sa/ar/%D9%87%D8%AF%D8%A7%D9%8A%D8%A7-%D8%AF%D8%B9%D8%A7%D8%A6%D9%8A%D8%A9-promotional-gift/c506140705"
+                  >Gifts</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link link-secondary ps-0"
+                  target="_blank"
+                  href="https://1pro.sa/ar/%D8%AA%D9%8A%D8%B4%D8%B1%D8%AA%D8%A7%D8%AA-t-shirt/c55975573"
+                  >Shirts</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link link-secondary ps-0"
+                  target="_blank"
+                  href="https://1pro.sa/ar/%D8%A7%D9%84%D9%85%D9%86%D8%A7%D8%B3%D8%A8%D8%A7%D8%AA-occasions/c1063329898"
+                  >Occasions</a
+                >
+              </li>
 
-<div class="col-12 col-lg-6 col-xl-6 border-end p-5">
-  <h3 class="h6 mb-3">Products</h3>
-  <ul class="nav flex-column">
-    <li class="nav-item">
-      <a class="nav-link link-secondary ps-0" href="https://1pro.sa/ar/%D8%A7%D9%84%D8%A3%D9%83%D9%88%D8%A7%D8%A8-cups/c1563639190" target="_blank" aria-current="page" href="#">Cups</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link link-secondary ps-0" target="_blank" href="https://1pro.sa/ar/%D9%87%D8%AF%D8%A7%D9%8A%D8%A7-%D8%AF%D8%B9%D8%A7%D8%A6%D9%8A%D8%A9-promotional-gift/c506140705">Gifts</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link link-secondary ps-0" target="_blank" href="https://1pro.sa/ar/%D8%AA%D9%8A%D8%B4%D8%B1%D8%AA%D8%A7%D8%AA-t-shirt/c55975573">Shirts</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link link-secondary ps-0" target="_blank" href="https://1pro.sa/ar/%D8%A7%D9%84%D9%85%D9%86%D8%A7%D8%B3%D8%A8%D8%A7%D8%AA-occasions/c1063329898">Occasions</a>
-    </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link link-secondary ps-0"
+                  target="_blank"
+                  href="https://1pro.sa/ar/%D8%A7%D9%84%D8%B9%D8%A7%D8%A8-toys/c1652256715"
+                  >Toys</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-    <li class="nav-item">
-      <a class="nav-link link-secondary ps-0" target="_blank" href="https://1pro.sa/ar/%D8%A7%D9%84%D8%B9%D8%A7%D8%A8-toys/c1652256715">Toys</a>
-    </li>
-  </ul>
-</div>
-
-</div>
-</div>
-
-<div class="container text-center py-3 small">Made by <a href="#" class="link-fancy" target="_blank">1Pro Developers</a>
-</div>
-</footer>
+      <div class="container text-center py-3 small">
+        Made by
+        <a href="#" class="link-fancy" target="_blank">1Pro Developers</a>
+      </div>
+    </footer>
 
     <script src="js/bootstrap.bundle.min.js"></script>
-<script src="js/aos.js"></script>
- <script>
- AOS.init({
-   duration: 800, // values from 0 to 3000, with step 50ms
- });
- </script>
+    <script src="js/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 800, // values from 0 to 3000, with step 50ms
+      });
+    </script>
 
- <script>
-  let scrollpos = window.scrollY
-  const header = document.querySelector(".navbar")
-  const header_height = header.offsetHeight
+    <script>
+      let scrollpos = window.scrollY;
+      const header = document.querySelector('.navbar');
+      const header_height = header.offsetHeight;
 
-  const add_class_on_scroll = () => header.classList.add("scrolled", "shadow-sm")
-  const remove_class_on_scroll = () => header.classList.remove("scrolled", "shadow-sm")
+      const add_class_on_scroll = () =>
+        header.classList.add('scrolled', 'shadow-sm');
+      const remove_class_on_scroll = () =>
+        header.classList.remove('scrolled', 'shadow-sm');
 
-  window.addEventListener('scroll', function() {
-    scrollpos = window.scrollY;
+      window.addEventListener('scroll', function () {
+        scrollpos = window.scrollY;
 
-    if (scrollpos >= header_height) { add_class_on_scroll() }
-    else { remove_class_on_scroll() }
+        if (scrollpos >= header_height) {
+          add_class_on_scroll();
+        } else {
+          remove_class_on_scroll();
+        }
 
-    console.log(scrollpos)
-  })
-</script>
-
+        console.log(scrollpos);
+      });
+    </script>
   </body>
 </html>
