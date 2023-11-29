@@ -2919,6 +2919,7 @@ textarea.form-control-lg {
   margin-bottom: 0;
   list-style: none; }
 
+ 
 .nav-link {
   display: block;
   padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
@@ -2931,7 +2932,7 @@ textarea.form-control-lg {
     .nav-link {
       transition: none; } }
   .nav-link:hover, .nav-link:focus {
-    color: var(--bs-nav-link-hover-color); }
+    color: rgb(253, 60, 60); }
   .nav-link.disabled {
     color: var(--bs-nav-link-disabled-color);
     pointer-events: none;
